@@ -1,10 +1,23 @@
+import { useDispatch, useSelector } from "react-redux";
+import { toggleMenu } from "../utils/menuSlice";
+import appStore from "../utils/appStore";
+
 const Header = () => {
+  const dispatch = useDispatch();
+  const menubar = () => {
+    dispatch(toggleMenu);
+  };
+  const isMenuOpen = useSelector((store) => store.menu.toggle);
+  console.log(isMenuOpen);
   return (
     <div className="flex items-center w-[95%] mx-auto py-1 justify-between">
       <div className="flex items-center gap-6">
-        <i className="fa-solid fa-bars text-xl cursor-pointer"></i>
+        <i
+          className="fa-solid fa-bars text-xl cursor-pointer"
+          onClick={() => menubar}
+        ></i>
         <img
-          className="w-32"
+          className="w-32 cursor-pointer"
           src="https://t3.ftcdn.net/jpg/03/00/38/90/360_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg"
           alt="youtube-logo"
         />
@@ -27,9 +40,9 @@ const Header = () => {
         </div>
       </div>
       <div className="flex gap-8 items-center">
-        <i className="fa fa-video-camera"></i>
-        <i className="fa-solid fa-bell"></i>
-        <i className="fa-solid fa-user"></i>
+        <i className="cursor-pointer fa fa-video-camera"></i>
+        <i className="cursor-pointer fa-solid fa-bell"></i>
+        <i className="cursor-pointer fa-solid fa-user"></i>
       </div>
     </div>
   );

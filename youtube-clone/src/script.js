@@ -1,13 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./component/Header";
-import Sidebar from "./component/Sidebar";
+import Body from "./component/Body";
+import appStore from "./utils/appStore";
+import { Provider } from "react-redux";
+
 const AppLayout = () => {
   return (
-    <>
+    <Provider store={appStore}>
       <Header />
-      <Sidebar />
-    </>
+      <Body />
+    </Provider>
   );
 };
 
