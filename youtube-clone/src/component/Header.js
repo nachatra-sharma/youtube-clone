@@ -1,14 +1,6 @@
-import { useDispatch, useSelector } from "react-redux";
-import { toggleMenu } from "../utils/menuSlice";
-
 const Header = () => {
-  // const dispatch = useDispatch();
-  // const menubar = () => {
-  //   dispatch(toggleMenu());
-  // };
-
   return (
-    <div className="flex items-center w-[95%] mx-auto py-1 justify-between">
+    <div className="flex items-center w-[100%] px-5 py-1 bg-white fixed justify-between z-30">
       <div className="flex items-center gap-6">
         <i
           className="fa-solid fa-bars text-xl cursor-pointer"

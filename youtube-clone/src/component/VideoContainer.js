@@ -15,7 +15,7 @@ const VideoContainer = () => {
     setVideo(json.items);
   };
   return (
-    <div className="flex justify-between flex-wrap py-4">
+    <div className="flex justify-between flex-wrap py-4 pt-[7rem]">
       {video.map((items) => (
         <VideoCard videoInfo={items} />
       ))}

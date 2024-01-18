@@ -1,3 +1,18 @@
+:root {
+  --secondary: rgb(128, 128, 129);
+}
 @tailwind base;
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+}
 @tailwind components;
 @tailwind utilities;

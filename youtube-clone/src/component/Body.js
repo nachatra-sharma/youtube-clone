@@ -7,7 +7,7 @@ const Body = () => {
     <>
       <div className="flex">
         <Sidebar />
-        <div className="flex flex-col pt-4 pr-2 w-[86%]">
+        <div className="flex flex-col pt-4 pr-2 w-[86%] absolute right-0">
           <ButtonList />
           <VideoContainer />
         </div>
