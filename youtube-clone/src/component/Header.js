@@ -1,20 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/menuSlice";
-import appStore from "../utils/appStore";
 
 const Header = () => {
-  const dispatch = useDispatch();
-  const menubar = () => {
-    dispatch(toggleMenu);
-  };
-  const isMenuOpen = useSelector((store) => store.menu.toggle);
-  console.log(isMenuOpen);
+  // const dispatch = useDispatch();
+  // const menubar = () => {
+  //   dispatch(toggleMenu());
+  // };
+
   return (
     <div className="flex items-center w-[95%] mx-auto py-1 justify-between">
       <div className="flex items-center gap-6">
         <i
           className="fa-solid fa-bars text-xl cursor-pointer"
-          onClick={() => menubar}
+          onClick={() => menubar()}
         ></i>
         <img
           className="w-32 cursor-pointer"

@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
+
 const Sidebar = () => {
+  // const isMenuOpen = useSelector((store) => store.menu.toggleMenu);
+  // console.log(isMenuOpen);
   return (
-    <div className="p-4 w-[14%] flex flex-col gap-4 select-none">
+    <div className="p-4 w-[14%] flex flex-col gap-4 select-none ">
       <div className="flex gap-4 items-center bg-gray-100 py-2 px-4 rounded-md hover:bg-gray-200">
         <i className="fa fa-home"></i>
         <p className="text-sm font-500">Home</p>
@@ -27,7 +31,7 @@ const Sidebar = () => {
         <p className="text-sm font-500">Your Channel</p>
       </div>
       <div className="flex gap-4 items-center hover:bg-gray-100 py-2 px-4 rounded-md">
-        <i class="fa-solid fa-bell"></i>
+        <i className="fa-solid fa-bell"></i>
         <p className="text-sm font-500">Subscribe</p>
       </div>
       <div className="flex gap-4 items-center hover:bg-gray-100 py-2 px-4 rounded-md">
