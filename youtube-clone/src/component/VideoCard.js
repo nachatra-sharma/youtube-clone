@@ -1,14 +1,14 @@
 import { LOGO } from "../utils/constant";
 
 const VideoCard = (props) => {
-  console.log(props);
   const { url } = props.videoInfo.snippet.thumbnails.medium;
   const { viewCount } = props.videoInfo.statistics;
   const { channelTitle, title } = props.videoInfo.snippet;
+  const { id } = props.videoInfo;
   return (
-    <div className="w-[23%] pb-4">
-      <div>
-        <img src={url} alt="" />{" "}
+    <div className="w-full pb-4">
+      <div className="w-full">
+        <img className="w-full object-contain" src={url} alt="" />{" "}
       </div>
       <div className="flex pt-3 gap-3">
         <div>
@@ -27,6 +27,14 @@ const VideoCard = (props) => {
           </div>
         </div>
       </div>
+      {/* <iframe
+        id="ytplayer"
+        type="text/html"
+        width="320"
+        height="180"
+        src={"https://www.youtube.com/embed/" + id}
+        frameborder="0"
+      ></iframe> */}
     </div>
   );
 };

@@ -1,11 +1,16 @@
+import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../utils/appSlice";
+
 const Header = () => {
+  const dispatch = useDispatch();
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  }
   return (
     <div className="flex items-center w-[100%] px-5 py-1 bg-white fixed justify-between z-30">
       <div className="flex items-center gap-6">
-        <i
-          className="fa-solid fa-bars text-xl cursor-pointer"
-          onClick={() => menubar()}
-        ></i>
+        <i className="fa-solid fa-bars text-xl cursor-pointer" onClick={()=>toggleMenuHandler()}></i>
         <img
           className="w-32 cursor-pointer"
           src="https://t3.ftcdn.net/jpg/03/00/38/90/360_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg"

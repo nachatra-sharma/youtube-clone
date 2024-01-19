@@ -1,16 +1,16 @@
-import ButtonList from "./ButtonList";
+import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
-import VideoContainer from "./VideoContainer";
-
+import { useSelector } from "react-redux";
 const Body = () => {
+  const isMenuOpen = useSelector(store => store.app.isMenuOpen);
   return (
     <>
       <div className="flex">
         <Sidebar />
-        <div className="flex flex-col pt-4 pr-2 w-[86%] absolute right-0">
-          <ButtonList />
-          <VideoContainer />
-        </div>
+        {
+          isMenuOpen ? <div className="flex flex-col pt-4 pr-2 w-[86%] absolute right-0"> <Outlet /> </div> :
+          <div className="flex flex-col pt-4 pr-2 w-[99%] absolute right-0"> <Outlet /> </div>
+        }
       </div>
     </>
   );
