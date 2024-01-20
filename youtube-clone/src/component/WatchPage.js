@@ -18,10 +18,10 @@ const WatchPage = () => {
     setVideo(json.items[0]);
   }
   const [searchParams] = useSearchParams();
-  console.log(searchParams.get('v'));
+  
   return (
       <div>
-        <VideoPlayer data={video}/>
+        <VideoPlayer data={video} id={searchParams.get('v')}/>
       </div>
       )
   };

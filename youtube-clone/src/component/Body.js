@@ -8,7 +8,7 @@ const Body = () => {
       <div className="flex">
         <Sidebar />
         {
-          isMenuOpen ? <div className="flex flex-col pt-4 pr-2 w-[86%] absolute right-0"> <Outlet /> </div> :
+          isMenuOpen ? <div className="flex flex-col pt-4 pr-2 w-[99%] lg:w-[86%] absolute right-0"> <Outlet /> </div> :
           <div className="flex flex-col pt-4 pr-2 w-[99%] absolute right-0"> <Outlet /> </div>
         }
       </div>

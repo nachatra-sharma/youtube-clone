@@ -2,7 +2,7 @@ import React from 'react';
 
 const VideoPlayer = (props) => {
   console.log(props);
-  const {id} = props.data;
+  const {id} = props;
   return (
     <div>
         <iframe id="player" type="text/html" width="900" height="600"

@@ -1,6 +1,6 @@
 const ButtonList = () => {
   return (
-    <div className="flex gap-4 pt-14 fixed bg-white z-20 w-[100%] pb-4">
+    <div className="hidden lg:flex gap-4 pt-14 fixed bg-white z-20 w-[100%] pb-4">
       <button className="bg-slate-950 text-white py-1 px-4 rounded-md text-sm font-medium">
         All
       </button>

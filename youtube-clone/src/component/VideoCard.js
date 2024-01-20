@@ -27,14 +27,6 @@ const VideoCard = (props) => {
           </div>
         </div>
       </div>
-      {/* <iframe
-        id="ytplayer"
-        type="text/html"
-        width="320"
-        height="180"
-        src={"https://www.youtube.com/embed/" + id}
-        frameborder="0"
-      ></iframe> */}
     </div>
   );
 };
