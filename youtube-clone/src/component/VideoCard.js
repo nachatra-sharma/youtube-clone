@@ -1,10 +1,23 @@
-import { LOGO } from "../utils/constant";
+import { useState, useEffect } from "react";
+import { CHANNEL_LOGO } from "../utils/constant";
 
 const VideoCard = (props) => {
   const { url } = props.videoInfo.snippet.thumbnails.medium;
   const { viewCount } = props.videoInfo.statistics;
-  const { channelTitle, title } = props.videoInfo.snippet;
-  const { id } = props.videoInfo;
+  const { channelTitle, title, channelId } = props.videoInfo.snippet;
+  const NEW_CHANNEL_LOGO = CHANNEL_LOGO.replace("UC_x5XG1OV2P6uZZ5FSM9Ttw", channelId);
+
+
+  const [logo, setLogo] = useState([]);
+  useEffect(()=>{
+    fetchLogo();
+  },[]);
+
+  const fetchLogo = async () => {
+    const data = await fetch(NEW_CHANNEL_LOGO);
+    const json = await data.json();
+    setLogo(json.items);
+  }
   return (
     <div className="w-full pb-4">
       <div className="w-full">
@@ -12,7 +25,12 @@ const VideoCard = (props) => {
       </div>
       <div className="flex pt-3 gap-3">
         <div>
-          <img src={LOGO} className="rounded-full w-8" alt="" />
+          {
+            logo.map((img) => {
+              const {url} = img.snippet.thumbnails.medium;
+              return <img src={url} key={img.id} className="rounded-full w-8" alt="" />
+            })
+          }
         </div>
         <div className="flex flex-col gap-1 w-[95%]">
           <p className="text-sm">{title}</p>

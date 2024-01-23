@@ -37,33 +37,33 @@ const Sidebar = () => {
         <p className="text-sm font-500">Subscribe</p>
       </div>
       <div className="flex gap-4 items-center hover:bg-gray-100 py-2 px-4 rounded-md">
-        <i class="fa-solid fa-video"></i>
+        <i className="fa-solid fa-video"></i>
         <p className="text-sm font-500">Your Videos</p>
       </div>
       <div className="flex gap-4 items-center hover:bg-gray-100 py-2 px-4 rounded-md">
-        <i class="fa-regular fa-clock"></i>
+        <i className="fa-regular fa-clock"></i>
         <p className="text-sm font-500">Watch Later</p>
       </div>
       <div className="flex gap-4 items-center hover:bg-gray-100 py-2 px-4 rounded-md">
-        <i class="fa-solid fa-angle-down"></i>
+        <i className="fa-solid fa-angle-down"></i>
         <p className="text-sm font-500">Show More</p>
       </div>
       <hr className="bg-gray-300" />
       <h3 className="font-600">Explore</h3>
       <div className="flex gap-4 items-center hover:bg-gray-100 py-2 px-4 rounded-md">
-        <i class="fa-solid fa-fire"></i>
+        <i className="fa-solid fa-fire"></i>
         <p className="text-sm font-500">Trending</p>
       </div>
       <div className="flex gap-4 items-center hover:bg-gray-100 py-2 px-4 rounded-md">
-        <i class="fa-solid fa-bag-shopping"></i>
+        <i className="fa-solid fa-bag-shopping"></i>
         <p className="text-sm font-500">Shopping</p>
       </div>
       <div className="flex gap-4 items-center hover:bg-gray-100 py-2 px-4 rounded-md">
-        <i class="fa-solid fa-film"></i>
+        <i className="fa-solid fa-film"></i>
         <p className="text-sm font-500">Movies</p>
       </div>
       <div className="flex gap-4 items-center hover:bg-gray-100 py-2 px-4 rounded-md">
-        <i class="fa-solid fa-thumbs-up"></i>
+        <i className="fa-solid fa-thumbs-up"></i>
         <p className="text-sm font-500">Liked Video</p>
       </div>
       <hr className="bg-gray-300" />

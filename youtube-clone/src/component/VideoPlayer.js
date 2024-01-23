@@ -1,13 +1,12 @@
 import React from 'react';
 
 const VideoPlayer = (props) => {
-  console.log(props);
   const {id} = props;
   return (
     <div>
         <iframe id="player" type="text/html" width="900" height="600"
         src={"http://www.youtube.com/embed/" + id } 
-        frameborder="0"></iframe>
+        frameBorder="0"></iframe>
     </div>
   )
 };
