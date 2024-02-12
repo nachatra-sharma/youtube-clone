@@ -19,9 +19,9 @@ const VideoCard = (props) => {
     setLogo(json.items);
   }
   return (
-    <div className="w-full pb-4">
-      <div className="w-full">
-        <img className="w-full object-contain" src={url} alt="" />{" "}
+    <div className="w-full pb-8 lg:pb-4">
+      <div className="w-full rounded-lg">
+        <img className="w-full object-contain rounded-lg" src={url} alt="" />{" "}
       </div>
       <div className="flex pt-3 gap-3">
         <div>

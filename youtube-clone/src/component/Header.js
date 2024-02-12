@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
-
 const Header = () => {
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
@@ -12,9 +11,9 @@ const Header = () => {
       <div className="flex items-center gap-6">
         <div className="lg:block hidden">
          <i className="fa-solid fa-bars hidden lg:block text-xl cursor-pointer" onClick={()=>toggleMenuHandler()}></i>
-        </div>
+        </div>     
         <img
-          className="w-8 lg:w-32 cursor-pointer"
+          className="w-[100px] lg:w-32 cursor-pointer"
           src="https://t3.ftcdn.net/jpg/03/00/38/90/360_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg"
           alt="youtube-logo"
         />
